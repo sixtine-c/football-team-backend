@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root 'api/teams#index'
   namespace :api do
     resources :teams
+    resources :players
   end
 end

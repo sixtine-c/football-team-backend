@@ -34,6 +34,12 @@ class Api::TeamsController < ApplicationController
     end
   end
 
+  def show
+    team = Team.find(params[:id])
+    players = team.players
+    render json: players if players
+  end
+
   def destroy
     team = Team.find(params[:id])
     team.destroy
