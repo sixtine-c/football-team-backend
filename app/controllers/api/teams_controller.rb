@@ -8,7 +8,7 @@ class Api::TeamsController < ApplicationController
         name: team.name
       }
     end
-    render json: teams
+    render json: teams, order: :name
   end
 
   def new
